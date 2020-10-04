@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Wow Words</title>
+<link />
+
+<style>
+body {
+  font-family: arial;
+  color: grey;
+  text-align: center;
+}
+
+.intro {
+  padding: 20px 10px 0 10px;
+  line-height: 1.8em;
+  color: black;
+  font-size: 1em;
+}
+
+h1 {
+  font-weight: 900;
+  background-color: grey;
+  color: white;
+  padding: 10px;
+}
+
+.main_container {
+  width: 100%;
+  top: 10px;
+  margin: 0;
+  position: relative;
+}
+
+.container {
+  width: 90%;
+ }
+ 
+.flashcard {
+  position: absolute;
+  display: inline-block;
+  margin: 2%;
+  width: 25%;
+  height: 250px;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+
+.wow_word {
+  font-size: 2.2em;
+  text-align: center;
+  font-weight: 650;
+  color: white;
+  padding: 50px 0px 50px 0px;
+}
+
+.definition {
+  font-size: 2em;
+  text-align: center;
+  font-weight: 500;
+  padding: 2px;
+}
+
+.synonyms {
+  font-size: 1.5em;
+  text-align: center;
+  font-style: italic;
+  font-style: italic;
+  padding: 2px;
+}
+
+
+
+
+
+#item1 {
+  top: 20px;
+  left: 5%;
+  background-color: lightblue;
+}
+
+#item2 {
+  top: 30px;
+  left: 5%;
+  background-color: pink;
+  visibility: hidden;
+}
+
+#item3 {
+  top: 20px;
+  left: 35%;
+  background-color: maroon;
+}
+
+#item4 {
+  top: 30px;
+  left: 35%;
+  background-color: orange;
+  visibility: hidden;
+}
+
+#item5 {
+  top: 20px;
+  left: 65%;
+  background-color: green;
+}
+
+#item6 {
+  top: 30px;
+  left: 65%;
+  background-color: purple;
+  visibility: hidden;
+}
+
+
+
+
+
+#item7 {
+  top: 290px;
+  left: 5%;
+  background-color: pink;
+ }
+
+#item8 {
+  top: 300px;
+  left: 5%;
+  background-color: lightblue;
+  visibility: hidden;
+}
+
+#item9 {
+  top: 290px;
+  left: 35%;
+  background-color: orange;
+ }
+
+#item10 {
+  top: 300px;
+  left: 35%;
+  background-color: maroon;
+  visibility: hidden;
+ }
+
+#item11 {
+  top: 290px;
+  left: 65%;
+  background-color: purple;
+}
+
+#item12 {
+  top: 300px;
+  left: 65%;
+  background-color: green;
+  visibility: hidden;
+}
+
+
+
+
+
+#item13 {
+  top: 560px;
+  left: 5%;
+  background-color: coral;
+ }
+
+#item14 {
+  top: 570px;
+  left: 5%;
+  background-color: #003DF5;
+  visibility: hidden;
+}
+
+#item15 {
+  top: 560px;
+  left: 35%;
+  background-color: limegreen;
+ }
+
+#item16 {
+  top: 570px;
+  left: 35%;
+  background-color: #F53D00;
+  visibility: hidden;
+ }
+
+#item17 {
+  top: 560px;
+  left: 65%;
+  background-color: blue;
+}
+
+#item18 {
+  top: 570px;
+  left: 65%;
+  background-color: turquoise;
+  visibility: hidden;
+}
+
+
+
+
+
+#item19 {
+  top: 830px;
+  left: 5%;
+  background-color: #003DF5;
+ }
+
+#item20 {
+  top: 840px;
+  left: 5%;
+  background-color: coral;
+  visibility: hidden;
+}
+
+#item21 {
+  top: 830px;
+  left: 35%;
+  background-color: #F53D00;
+ }
+
+#item22 {
+  top: 840px;
+  left: 35%;
+  background-color: limegreen;
+  visibility: hidden;
+ }
+
+#item23 {
+  top: 830px;
+  left: 65%;
+  background-color: turquoise;
+}
+
+#item24 {
+  top: 840px;
+  left: 65%;
+  background-color: blue;
+  visibility: hidden;
+}
+
+
+
+
+
+#item25 {
+  top: 1100px;
+  left: 5%;
+  background-color: #FFCC33;
+ }
+
+#item26 {
+  top: 1110px;
+  left: 5%;
+  background-color: #66FF33;
+  visibility: hidden;
+}
+
+#item27 {
+  top: 1100px;
+  left: 35%;
+  background-color: #8AB800;
+ }
+
+#item28 {
+  top: 1110px;
+  left: 35%;
+  background-color: #FF3366;
+  visibility: hidden;
+ }
+
+#item29 {
+  top: 1100px;
+  left: 65%;
+  background-color: #FF33CC;
+}
+
+#item30 {
+  top: 1110px;
+  left: 65%;
+  background-color: red;
+  visibility: hidden;
+}
+
+
+
+
+
+#item31 {
+  top: 1370px;
+  left: 5%;
+  background-color: #66FF33;
+ }
+
+#item32 {
+  top: 1380px;
+  left: 5%;
+  background-color: #FFCC33;
+  visibility: hidden;
+}
+
+#item33 {
+  top: 1370px;
+  left: 35%;
+  background-color: #FF3366;
+ }
+
+#item34 {
+  top: 1380px;
+  left: 35%;
+  background-color: #8AB800;
+  visibility: hidden;
+ }
+
+#item35 {
+  top: 1370px;
+  left: 65%;
+  background-color: red;
+}
+
+#item36 {
+  top: 1380px;
+  left: 65%;
+  background-color: #FF33CC;
+  visibility: hidden;
+}
+
+
+
+
+
+#item37 {
+  top: 1640px;
+  left: 5%;
+  background-color: #A32900;
+ }
+
+#item38 {
+  top: 1650px;
+  left: 5%;
+  background-color: #BB00FA;
+  visibility: hidden;
+}
+
+#item39 {
+  top: 1640px;
+  left: 35%;
+  background-color: yellow;
+ }
+
+#item40 {
+  top: 1650px;
+  left: 35%;
+  background-color: #003EFA;
+  visibility: hidden;
+ }
+
+#item41 {
+  top: 1640px;
+  left: 65%;
+  background-color: #00A37A;
+}
+
+#item42 {
+  top: 1650px;
+  left: 65%;
+  background-color: orange;
+  visibility: hidden;
+}
+
+
+
+
+
+#item43 {
+  top: 1910px;
+  left: 5%;
+  background-color: #BB00FA;
+ }
+
+#item44 {
+  top: 1920px;
+  left: 5%;
+  background-color: #A32900;
+  visibility: hidden;
+}
+
+#item45 {
+  top: 1910px;
+  left: 35%;
+  background-color: #003EFA;
+ }
+
+#item46 {
+  top: 1920px;
+  left: 35%;
+  background-color: yellow;
+  visibility: hidden;
+ }
+
+#item47 {
+  top: 1910px;
+  left: 65%;
+  background-color: #FFCC33;
+}
+
+#item48 {
+  top: 1920px;
+  left: 65%;
+  background-color: #00A37A;
+  visibility: hidden;
+}
+
+
+
+
+
+#item49 {
+  top: 2180px;
+  left: 5%;
+  background-color: green;
+ }
+
+#item50 {
+  top: 2190px;
+  left: 5%;
+  background-color: purple;
+  visibility: hidden;
+}
+
+#item51 {
+  top: 2180px;
+  left: 35%;
+  background-color: lightblue;
+ }
+
+#item52 {
+  top: 2190px;
+  left: 35%;
+  background-color: lightpink;
+  visibility: hidden;
+ }
+
+#item53 {
+  top: 2180px;
+  left: 65%;
+  background-color: maroon;
+}
+
+#item54 {
+  top: 2190px;
+  left: 65%;
+  background-color: indigo;
+  visibility: hidden;
+}
+
+
+
+
+
+#item55 {
+  top: 2450px;
+  left: 5%;
+  background-color: blue;
+ }
+
+#item56 {
+  top: 2470px;
+  left: 5%;
+  background-color: purple;
+  visibility: hidden;
+}
+
+#item57 {
+  top: 2450px;
+  left: 35%;
+  background-color: limegreen;
+ }
+
+#item58 {
+  top: 2470px;
+  left: 35%;
+  background-color: lightpink;
+  visibility: hidden;
+ }
+
+#item59 {
+  top: 2450px;
+  left: 65%;
+  background-color: coral;
+}
+
+#item60 {
+  top: 2470px;
+  left: 65%;
+  background-color: orange;
+  visibility: hidden;
+}
+
+
+
+
+#item61 {
+  top: 2720px;
+  left: 5%;
+  background-color: Turquoise;
+ }
+
+#item62 {
+  top: 2730px;
+  left: 5%;
+  background-color: yellow;
+  visibility: hidden;
+}
+
+#item63 {
+  top: 2720px;
+  left: 35%;
+  background-color: Teal;
+ }
+
+#item64 {
+  top: 2730px;
+  left: 35%;
+  background-color: yellow;
+  visibility: hidden;
+ }
+
+#item65 {
+  top: 2720px;
+  left: 65%;
+  background-color: navy;
+}
+
+#item66 {
+  top: 2730px;
+  left: 65%;
+  background-color: lime;
+  visibility: hidden;
+}
+
+
+
+
+
+#item67 {
+  top: 2990px;
+  left: 5%;
+  background-color: red;
+ }
+
+#item68 {
+  top: 3000px;
+  left: 5%;
+  background-color: purple;
+  visibility: hidden;
+}
+
+#item69 {
+  top: 2990px;
+  left: 35%;
+  background-color: purple;
+ }
+
+#item70 {
+  top: 3000px;
+  left: 35%;
+  background-color: coral;
+  visibility: hidden;
+ }
+
+#item71 {
+  top: 2990px;
+  left: 65%;
+  background-color: brown;
+}
+
+#item72 {
+  top: 3000px;
+  left: 65%;
+  background-color: limegreen;
+  visibility: hidden;
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+  <h1>WOW WORDS</h1>
+  <p class="intro">Here are some amazing <b>Wow Words</b> you can use in your writing at school to make it more interesting.<br> If you can add them to your stories your teachers will be really impressed! <br>
+  Mouse over each word below to see what the word means and some other words you could use instead.<br>  How many <b>Wow Words</b> do you know already?  </p>
+</header>
+
+<div class="main_container">
+
+
+
+<!--Wow Words: Abundance, Accommodate & Acknowledge-->
+
+  <div class="container">
+    <div class="flashcard" id="item1" onmouseenter="hide1()" onmouseleave="show1()">
+      <p class="wow_word">Abundance</p>
+    </div>
+    <div class="flashcard" id="item2">
+      <p class="definition">= Lots of</p>
+      <p class="synonyms">Plenty / Oodles</p>
+    </div>
+
+    <div class="flashcard" id="item3" onmouseenter="hide3()" onmouseleave="show3()">
+      <p class="wow_word">Accommodate</p>
+    </div>
+    <div class="flashcard" id="item4">
+      <p class="definition">= to help make something fit</p>
+      <p class="synonyms">help out / do a favour for / make space for</p>
+    </div>
+
+    <div class="flashcard" id="item5" onmouseenter="hide5()" onmouseleave="show5()">
+      <p class="wow_word">Acknowledge</p>
+    </div>
+    <div class="flashcard" id="item6">
+      <p class="definition">= to pay attention to</p>
+      <p class="synonyms">to notice / to recognise</p>
+    </div>
+  </div>
+
+
+
+<!--Wow Words: Adapt, Advantage & Aggravate-->
+
+  <div class="container">
+    <div class="flashcard" id="item7" onmouseenter="hide7()" onmouseleave="show7()">
+      <p class="wow_word">Adapt</p>
+    </div>
+    <div class="flashcard" id="item8">
+      <p class="definition">= change to meet the need</p>
+      <p class="synonyms">alter / change</p>
+    </div>
+
+    <div class="flashcard" id="item9" onmouseenter="hide9()" onmouseleave="show9()">
+      <p class="wow_word">Advantage</p>
+    </div>
+    <div class="flashcard" id="item10">
+      <p class="definition">= something that is very helpful</p>
+      <p class="synonyms">benefit / big help / profit</p>
+    </div>
+
+    <div class="flashcard" id="item11" onmouseenter="hide11()" onmouseleave="show11()">
+      <p class="wow_word">Aggravate</p>
+    </div>
+    <div class="flashcard" id="item12">
+      <p class="definition">= to make worse</p>
+      <p class="synonyms">to annoy / to make more difficult / to upset<p>
+    </div>
+  </div>
+
+
+
+<!--Wow Words: Assertive, Assume & Authentic-->
+
+  <div class="container">
+    <div class="flashcard" id="item13" onmouseenter="hide13()" onmouseleave="show13()">
+      <p class="wow_word">Assertive</p>
+    </div>
+    <div class="flashcard" id="item14">
+      <p class= "definition">= confident / saying how you feel about something</p>
+      <p class="synonyms">speaking up/out / able to express yourself</p>
+    </div>
+ 
+    <div class="flashcard" id="item15" onmouseenter="hide15()" onmouseleave="show15()">
+      <p class="wow_word">Assume</p>
+    </div>
+    <div class="flashcard" id="item16">
+      <p class="definition">= to think you know something</p>
+      <p class="synonyms">to believe / to suppose / to understand / to guess</p>
+    </div>
+
+    <div class="flashcard" id="item17" onmouseenter="hide17()" onmouseleave="show17()">
+      <p class="wow_word">Authentic</p>
+    </div>
+    <div class="flashcard" id="item18">
+      <p class="definition">= the real thing</p>
+      <p class="synonyms">accurate / actual / genuine / reliable / valid / not fake<p>
+    </div>
+  </div>
+
+
+
+<!--Wow Words: Bewildered, Capacity & Clarify-->
+
+  <div class="container">
+    <div class="flashcard" id="item19" onmouseenter="hide19()" onmouseleave="show19()">
+      <p class="wow_word">Bewildered</p>
+    </div>
+    <div class="flashcard" id="item20">
+      <p class="definition">= totally surprised and confused</p>
+      <p class="synonyms">speaking up/out / able to express yourself</p>
+    </div>
+
+    <div class="flashcard" id="item21" onmouseenter="hide21()" onmouseleave="show21()">
+      <p class="wow_word">Capacity</p>
+    </div>
+    <div class="flashcard" id="item22">
+      <p class="definition">= the ability to hold or do something</p>
+      <p class="synonyms">size / how much / ability / skill</p>
+    </div>
+
+    <div class="flashcard" id="item23" onmouseenter="hide23()" onmouseleave="show23()">
+      <p class="wow_word">Clarify</p>
+    </div>
+    <div class="flashcard" id="item24">
+      <p class="definition">= to explain</p>
+      <p class="synonyms">to make something clear / to give a reason<p>
+    </div>
+  </div>
+
+
+
+
+<!--Wow Words: Component, Coincidence & Confine-->
+
+  <div class="container">
+    <div class="flashcard" id="item25" onmouseenter="hide25()" onmouseleave="show25()">
+      <p class="wow_word">Component</p>
+    </div>
+    <div class="flashcard" id="item26">
+      <p class="definition">= a part of something</p>
+      <p class="synonyms">part</p>
+    </div>
+
+    <div class="flashcard" id="item27" onmouseenter="hide27()" onmouseleave="show27()">
+      <p class="wow_word">Coincidence</p>
+    </div>
+    <div class="flashcard" id="item28">
+      <p class="definition">= accident / fate</p>
+      <p class="synonyms">chance</p>
+    </div>
+
+    <div class="flashcard" id="item29" onmouseenter="hide29()" onmouseleave="show29()">
+      <p class="wow_word">Confine</p>
+    </div>
+    <div class="flashcard" id="item30">
+      <p class="definition">= to trap something in a limited space</p>
+      <p class="synonyms">to trap / to imprison / to lock away / to limit to<p>
+    </div>
+  </div>
+
+
+
+<!--Wow Words: Conscious, Dominate & Disastrous-->
+
+  <div class="container">
+    <div class="flashcard" id="item31" onmouseenter="hide31()" onmouseleave="show31()">
+      <p class="wow_word">Conscious</p>
+    </div>
+    <div class="flashcard" id="item32">
+      <p class="definition">= being aware</p>
+      <p class="synonyms">alert to / awake / intended to / knowing about / meaning to</p>
+    </div>
+
+    <div class="flashcard" id="item33" onmouseenter="hide33()" onmouseleave="show33()">
+      <p class="wow_word">Dominate</p>
+    </div>
+    <div class="flashcard" id="item34">
+      <p class="definition">= to have control over / be the boss of</p>
+      <p class="synonyms">control / boss around / take over</p>
+    </div>
+
+    <div class="flashcard" id="item35" onmouseenter="hide35()" onmouseleave="show35()">
+      <p class="wow_word">Disastrous</p>
+    </div>
+    <div class="flashcard" id="item36">
+      <p class="definition">= awful</p>
+      <p class="synonyms">horrible / shocking / terrible<p>
+    </div>
+  </div>
+
+
+
+<!--Wow Words: Elated, Hazardous & Intention-->
+
+  <div class="container">
+    <div class="flashcard" id="item37" onmouseenter="hide37()" onmouseleave="show37()">
+      <p class="wow_word">Elated</p>
+    </div>
+    <div class="flashcard" id="item38">
+      <p class="definition">= being extremely happy</p>
+      <p class="synonyms">excited / joyful / giddy</p>
+    </div>
+
+    <div class="flashcard" id="item39" onmouseenter="hide39()" onmouseleave="show39()">
+      <p class="wow_word">Hazardous</p>
+    </div>
+    <div class="flashcard" id="item40">
+      <p class="definition">= extremely dangerous</p>
+      <p class="synonyms">harmful / risky / unhealthy/ damaging</p>
+    </div>
+
+    <div class="flashcard" id="item41" onmouseenter="hide41()" onmouseleave="show41()">
+      <p class="wow_word">Intention</p>
+    </div>
+    <div class="flashcard" id="item42">
+      <p class="definition">= aim / plan</p>
+      <p class="synonyms"> objective / goal / meaning / purpose<p>
+    </div>
+  </div>
+
+
+
+<!--Wow Words: Legible, Leisure & Literally-->
+
+  <div class="container">
+    <div class="flashcard" id="item43" onmouseenter="hide43()" onmouseleave="show43()">
+      <p class="wow_word">Legible</p>
+    </div>
+    <div class="flashcard" id="item44">
+      <p class="definition">= easy to read</p>
+      <p class="synonyms">clear / neat</p>
+    </div>
+
+    <div class="flashcard" id="item45" onmouseenter="hide45()" onmouseleave="show45()">
+      <p class="wow_word">Leisure</p>
+    </div>
+    <div class="flashcard" id="item46">
+      <p class="definition">= free time</p>
+      <p class="synonyms">time off / fun / recreation</p>
+    </div>
+
+    <div class="flashcard" id="item47" onmouseenter="hide47()" onmouseleave="show47()">
+      <p class="wow_word">Literally</p>
+    </div>
+    <div class="flashcard" id="item48">
+      <p class="definition">= actually, exactly as said</p>
+      <p class="synonyms">strictly speaking / exactly / in reality<p>
+    </div>
+  </div>
+
+
+
+<!--Wow Words: Mutual, Obstacle & Perceive-->
+
+  <div class="container">
+    <div class="flashcard" id="item49" onmouseenter="hide49()" onmouseleave="show49()">
+      <p class="wow_word">Mutual</p>
+    </div>
+    <div class="flashcard" id="item50">
+      <p class="definition">= similar</p>
+      <p class="synonyms">shared / connected / in common</p>
+    </div>
+
+    <div class="flashcard" id="item51" onmouseenter="hide51()" onmouseleave="show51()">
+      <p class="wow_word">Obstacle</p>
+    </div>
+    <div class="flashcard" id="item52">
+      <p class="definition">= something that blocks the way</p>
+      <p class="synonyms">obstrcution / hitch / stumbling block</p>
+    </div>
+
+    <div class="flashcard" id="item53" onmouseenter="hide53()" onmouseleave="show53()">
+      <p class="wow_word">Perceive</p>
+    </div>
+    <div class="flashcard" id="item54">
+      <p class="definition">= to understand</p>
+      <p class="synonyms">to be aware of/ to see / to feel / to grasp<p>
+    </div>
+  </div>
+
+
+
+<!--Wow Words: Periodically, Perturbed & Ponder-->
+
+  <div class="container">
+    <div class="flashcard" id="item55" onmouseenter="hide55()" onmouseleave="show55()">
+      <p class="wow_word">Periodically</p>
+    </div>
+    <div class="flashcard" id="item56">
+      <p class="definition">= every so often</p>
+      <p class="synonyms">in cycles / now and again / occasionally</p>
+    </div>
+
+    <div class="flashcard" id="item57" onmouseenter="hide57()" onmouseleave="show57()">
+      <p class="wow_word">Perturbed</p>
+    </div>
+    <div class="flashcard" id="item58">
+      <p class="definition">= feeling upset</p>
+      <p class="synonyms">angered / worried / troubled / annoyed</p>
+    </div>
+
+    <div class="flashcard" id="item59" onmouseenter="hide59()" onmouseleave="show59()">
+      <p class="wow_word">Ponder</p>
+    </div>
+    <div class="flashcard" id="item60">
+      <p class="definition">= to think about</p>
+      <p class="synonyms">to consider/ to mull over / to cogitate / to reflect<p>
+    </div>
+  </div>
+
+
+
+<!--Wow Words: Reluctant, Spontaneous & Summon-->
+
+  <div class="container">
+    <div class="flashcard" id="item61" onmouseenter="hide61()" onmouseleave="show61()">
+      <p class="wow_word">Reluctant</p>
+    </div>
+    <div class="flashcard" id="item62">
+      <p class="definition">= not wanting to</p>
+      <p class="synonyms">unwilling / hesitant / resistant</p>
+    </div>
+
+    <div class="flashcard" id="item63" onmouseenter="hide63()" onmouseleave="show63()">
+      <p class="wow_word">Spontaneous</p>
+    </div>
+    <div class="flashcard" id="item64">
+      <p class="definition">= happening all of a sudden / not planned</p>
+      <p class="synonyms">spur-of-the-moment / off-the-cuff</p>
+    </div>
+
+    <div class="flashcard" id="item65" onmouseenter="hide65()" onmouseleave="show65()">
+      <p class="wow_word">Summon</p>
+    </div>
+    <div class="flashcard" id="item66">
+      <p class="definition">= order to attend / to gather or collect</p>
+      <p class="synonyms">call for / invite / to muster / to rally<p>
+    </div>
+  </div>
+
+
+
+<!--Wow Words: Thrifty, Vacant & Yield-->
+
+  <div class="container">
+    <div class="flashcard" id="item67" onmouseenter="hide67()" onmouseleave="show67()">
+      <p class="wow_word">Thrifty</p>
+    </div>
+    <div class="flashcard" id="item68">
+      <p class="definition">= using money or resources carefully</p>
+      <p class="synonyms">frugal / economical / parsimonious</p>
+    </div>
+
+    <div class="flashcard" id="item69" onmouseenter="hide69()" onmouseleave="show69()">
+      <p class="wow_word">Vacant</p>
+    </div>
+    <div class="flashcard" id="item70">
+      <p class="definition">= empty / unused / unoccupied</p>
+      <p class="synonyms">blank / void / not filled up</p>
+    </div>
+
+    <div class="flashcard" id="item71" onmouseenter="hide71()" onmouseleave="show71()">
+      <p class="wow_word">Yield</p>
+    </div>
+    <div class="flashcard" id="item72">
+      <p class="definition">= to give up or produce</p>
+      <p class="synonyms">to surrender / relent / blossom / earn<p>
+    </div>
+  </div>
+
+
+
+</div> <!--main container end tag -->
+
+
+
+
+<script>
+
+
+
+<!--Functions for Wow Words: Abundance, Accommodate & Acknowledge-->
+
+function hide1() {
+  document.getElementById("item1").style.visibility = "hidden";
+  document.getElementById("item2").style.visibility = "visible";
+}
+
+function show1() {
+  document.getElementById("item1").style.visibility = "visible";
+  document.getElementById("item2").style.visibility = "hidden";
+}
+
+function hide3() {
+  document.getElementById("item3").style.visibility = "hidden";
+  document.getElementById("item4").style.visibility = "visible";
+}
+
+function show3() {
+  document.getElementById("item3").style.visibility = "visible";
+  document.getElementById("item4").style.visibility = "hidden";
+}
+
+function hide5() {
+  document.getElementById("item5").style.visibility = "hidden";
+  document.getElementById("item6").style.visibility = "visible";
+}
+
+function show5() {
+  document.getElementById("item5").style.visibility = "visible";
+  document.getElementById("item6").style.visibility = "hidden";
+}
+
+
+
+<!--Functions for Wow Words: Adapt, Advantage & Aggravate-->
+
+function hide7() {
+  document.getElementById("item7").style.visibility = "hidden";
+  document.getElementById("item8").style.visibility = "visible";
+}
+
+function show7() {
+  document.getElementById("item7").style.visibility = "visible";
+  document.getElementById("item8").style.visibility = "hidden";
+}
+
+function hide9() {
+  document.getElementById("item9").style.visibility = "hidden";
+  document.getElementById("item10").style.visibility = "visible";
+}
+
+function show9() {
+  document.getElementById("item9").style.visibility = "visible";
+  document.getElementById("item10").style.visibility = "hidden";
+}
+
+function hide11() {
+  document.getElementById("item11").style.visibility = "hidden";
+  document.getElementById("item12").style.visibility = "visible";
+}
+
+function show11() {
+  document.getElementById("item11").style.visibility = "visible";
+  document.getElementById("item12").style.visibility = "hidden";
+}
+
+
+
+<!--Functions for Wow Words: Assertive, Assume & Authentic-->
+
+function hide13() {
+  document.getElementById("item13").style.visibility = "hidden";
+  document.getElementById("item14").style.visibility = "visible";
+}
+
+function show13() {
+  document.getElementById("item13").style.visibility = "visible";
+  document.getElementById("item14").style.visibility = "hidden";
+}
+
+function hide15() {
+  document.getElementById("item15").style.visibility = "hidden";
+  document.getElementById("item16").style.visibility = "visible";
+}
+
+function show15() {
+  document.getElementById("item15").style.visibility = "visible";
+  document.getElementById("item16").style.visibility = "hidden";
+}
+
+function hide17() {
+  document.getElementById("item17").style.visibility = "hidden";
+  document.getElementById("item18").style.visibility = "visible";
+}
+
+function show17() {
+  document.getElementById("item17").style.visibility = "visible";
+  document.getElementById("item18").style.visibility = "hidden";
+}
+
+
+
+<!--Functions for Wow Words: Bewildered, Capacity & Clarify-->
+
+function hide19() {
+  document.getElementById("item19").style.visibility = "hidden";
+  document.getElementById("item20").style.visibility = "visible";
+}
+
+function show19() {
+  document.getElementById("item19").style.visibility = "visible";
+  document.getElementById("item20").style.visibility = "hidden";
+}
+
+function hide21() {
+  document.getElementById("item21").style.visibility = "hidden";
+  document.getElementById("item22").style.visibility = "visible";
+}
+
+function show21() {
+  document.getElementById("item21").style.visibility = "visible";
+  document.getElementById("item22").style.visibility = "hidden";
+}
+
+function hide23() {
+  document.getElementById("item23").style.visibility = "hidden";
+  document.getElementById("item24").style.visibility = "visible";
+}
+
+function show23() {
+  document.getElementById("item23").style.visibility = "visible";
+  document.getElementById("item24").style.visibility = "hidden";
+}
+
+
+
+<!--Functions for Wow Words: Coincidence, Component & Confine-->
+
+function hide25() {
+  document.getElementById("item25").style.visibility = "hidden";
+  document.getElementById("item26").style.visibility = "visible";
+}
+
+function show25() {
+  document.getElementById("item25").style.visibility = "visible";
+  document.getElementById("item26").style.visibility = "hidden";
+}
+
+function hide27() {
+  document.getElementById("item27").style.visibility = "hidden";
+  document.getElementById("item28").style.visibility = "visible";
+}
+
+function show27() {
+  document.getElementById("item27").style.visibility = "visible";
+  document.getElementById("item28").style.visibility = "hidden";
+}
+
+function hide29() {
+  document.getElementById("item29").style.visibility = "hidden";
+  document.getElementById("item30").style.visibility = "visible";
+}
+
+function show29() {
+  document.getElementById("item29").style.visibility = "visible";
+  document.getElementById("item30").style.visibility = "hidden";
+}
+
+
+
+<!--Functions for Wow Words: Conscious, Disastrous, Dominate-->
+
+function hide31() {
+  document.getElementById("item31").style.visibility = "hidden";
+  document.getElementById("item32").style.visibility = "visible";
+}
+
+function show31() {
+  document.getElementById("item31").style.visibility = "visible";
+  document.getElementById("item32").style.visibility = "hidden";
+}
+
+function hide33() {
+  document.getElementById("item33").style.visibility = "hidden";
+  document.getElementById("item34").style.visibility = "visible";
+}
+
+function show33() {
+  document.getElementById("item33").style.visibility = "visible";
+  document.getElementById("item34").style.visibility = "hidden";
+}
+
+function hide35() {
+  document.getElementById("item35").style.visibility = "hidden";
+  document.getElementById("item36").style.visibility = "visible";
+}
+
+function show35() {
+  document.getElementById("item35").style.visibility = "visible";
+  document.getElementById("item36").style.visibility = "hidden";
+}
+
+
+
+<!--Functions for Wow Words: Elated, Hazardous, Intention-->
+
+function hide37() {
+  document.getElementById("item37").style.visibility = "hidden";
+  document.getElementById("item38").style.visibility = "visible";
+}
+
+function show37() {
+  document.getElementById("item37").style.visibility = "visible";
+  document.getElementById("item38").style.visibility = "hidden";
+}
+
+function hide39() {
+  document.getElementById("item39").style.visibility = "hidden";
+  document.getElementById("item40").style.visibility = "visible";
+}
+
+function show39() {
+  document.getElementById("item39").style.visibility = "visible";
+  document.getElementById("item40").style.visibility = "hidden";
+}
+
+function hide41() {
+  document.getElementById("item41").style.visibility = "hidden";
+  document.getElementById("item42").style.visibility = "visible";
+}
+
+function show41() {
+  document.getElementById("item41").style.visibility = "visible";
+  document.getElementById("item42").style.visibility = "hidden";
+}
+
+
+
+<!--Functions for Wow Words: Legible, Leisure & Literally-->
+
+function hide43() {
+  document.getElementById("item43").style.visibility = "hidden";
+  document.getElementById("item44").style.visibility = "visible";
+}
+
+function show43() {
+  document.getElementById("item43").style.visibility = "visible";
+  document.getElementById("item44").style.visibility = "hidden";
+}
+
+function hide45() {
+  document.getElementById("item45").style.visibility = "hidden";
+  document.getElementById("item46").style.visibility = "visible";
+}
+
+function show45() {
+  document.getElementById("item45").style.visibility = "visible";
+  document.getElementById("item46").style.visibility = "hidden";
+}
+
+function hide47() {
+  document.getElementById("item47").style.visibility = "hidden";
+  document.getElementById("item48").style.visibility = "visible";
+}
+
+function show47() {
+  document.getElementById("item47").style.visibility = "visible";
+  document.getElementById("item48").style.visibility = "hidden";
+}
+
+
+
+<!--Functions for Wow Words: Mutual, Obstacle, Perceive-->
+
+function hide49() {
+  document.getElementById("item49").style.visibility = "hidden";
+  document.getElementById("item50").style.visibility = "visible";
+}
+
+function show49() {
+  document.getElementById("item49").style.visibility = "visible";
+  document.getElementById("item50").style.visibility = "hidden";
+}
+
+function hide51() {
+  document.getElementById("item51").style.visibility = "hidden";
+  document.getElementById("item52").style.visibility = "visible";
+}
+
+function show51() {
+  document.getElementById("item51").style.visibility = "visible";
+  document.getElementById("item52").style.visibility = "hidden";
+}
+
+function hide53() {
+  document.getElementById("item53").style.visibility = "hidden";
+  document.getElementById("item54").style.visibility = "visible";
+}
+
+function show53() {
+  document.getElementById("item53").style.visibility = "visible";
+  document.getElementById("item54").style.visibility = "hidden";
+}
+
+
+
+<!--Functions for Wow Words: Periodically, Perturbed & Ponder-->
+
+function hide55() {
+  document.getElementById("item55").style.visibility = "hidden";
+  document.getElementById("item56").style.visibility = "visible";
+}
+
+function show55() {
+  document.getElementById("item55").style.visibility = "visible";
+  document.getElementById("item56").style.visibility = "hidden";
+}
+
+function hide57() {
+  document.getElementById("item57").style.visibility = "hidden";
+  document.getElementById("item58").style.visibility = "visible";
+}
+
+function show57() {
+  document.getElementById("item57").style.visibility = "visible";
+  document.getElementById("item58").style.visibility = "hidden";
+}
+
+function hide59() {
+  document.getElementById("item59").style.visibility = "hidden";
+  document.getElementById("item60").style.visibility = "visible";
+}
+
+function show59() {
+  document.getElementById("item59").style.visibility = "visible";
+  document.getElementById("item60").style.visibility = "hidden";
+}
+
+
+
+<!--Functions for Wow Words: Reluctant, Spontaneous, Summon-->
+
+function hide61() {
+  document.getElementById("item61").style.visibility = "hidden";
+  document.getElementById("item62").style.visibility = "visible";
+}
+
+function show61() {
+  document.getElementById("item61").style.visibility = "visible";
+  document.getElementById("item62").style.visibility = "hidden";
+}
+
+function hide63() {
+  document.getElementById("item63").style.visibility = "hidden";
+  document.getElementById("item64").style.visibility = "visible";
+}
+
+function show63() {
+  document.getElementById("item63").style.visibility = "visible";
+  document.getElementById("item64").style.visibility = "hidden";
+}
+
+function hide65() {
+  document.getElementById("item65").style.visibility = "hidden";
+  document.getElementById("item66").style.visibility = "visible";
+}
+
+function show65() {
+  document.getElementById("item65").style.visibility = "visible";
+  document.getElementById("item66").style.visibility = "hidden";
+}
+
+
+
+<!--Functions for Wow Words: Thrifty, Vacant, Yield-->
+
+function hide67() {
+  document.getElementById("item67").style.visibility = "hidden";
+  document.getElementById("item68").style.visibility = "visible";
+}
+
+function show67() {
+  document.getElementById("item67").style.visibility = "visible";
+  document.getElementById("item68").style.visibility = "hidden";
+}
+
+function hide69() {
+  document.getElementById("item69").style.visibility = "hidden";
+  document.getElementById("item70").style.visibility = "visible";
+}
+
+function show69() {
+  document.getElementById("item69").style.visibility = "visible";
+  document.getElementById("item70").style.visibility = "hidden";
+}
+
+function hide71() {
+  document.getElementById("item71").style.visibility = "hidden";
+  document.getElementById("item72").style.visibility = "visible";
+}
+
+function show71() {
+  document.getElementById("item71").style.visibility = "visible";
+  document.getElementById("item72").style.visibility = "hidden";
+}
+
+
+
+
+</script>
+
+</body>
+</html>
